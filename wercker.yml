@@ -2,7 +2,7 @@ box: rocker/tidyverse
 build:
   steps:
     - script:
-      name: install
+      name: Install packages
       code: |
        Rscript -e "install.packages('mosaicData')"
     - script:
