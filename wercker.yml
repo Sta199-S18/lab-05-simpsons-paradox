@@ -1,0 +1,11 @@
+box: rocker/tidyverse
+build:
+  steps:
+    - script:
+      name: install
+      code: |
+       Rscript -e "install.packages('mosaicData')"
+    - script:
+      name: Render R markdown
+      code: |
+        Rscript -e "library(rmarkdown);render('lab-05-simpsons-paradox.Rmd')"
